@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LMS Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LMS | Learning Management System</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to LMS</h1>
-    <p>Select your login type:</p>
-    <div class="login-options">
-      <a href="login_student.html" class="btn">Student Login</a>
-      <a href="login_professor.html" class="btn">Professor Login</a>
-      <a href="login_admin.html" class="btn">Admin Login</a>
+  <header class="header">
+    <div class="logo">📘 LMS Portal</div>
+  </header>
+
+  <main class="main-section">
+    <div class="intro">
+      <h1>Welcome to the Learning Management System</h1>
+      <p>Your centralized hub for education—whether you're a student, professor, or administrator.</p>
     </div>
-  </div>
+
+    <div class="card-grid">
+      <a href="login_student.html" class="card">
+        <i class="fas fa-user-graduate fa-3x"></i>
+        <h3>Student Login</h3>
+        <p>Access your courses, assignments, and grades.</p>
+      </a>
+      <a href="login_professor.html" class="card">
+        <i class="fas fa-chalkboard-teacher fa-3x"></i>
+        <h3>Professor Login</h3>
+        <p>Manage course materials, student progress, and evaluations.</p>
+      </a>
+      <a href="login_admin.html" class="card">
+        <i class="fas fa-user-cog fa-3x"></i>
+        <h3>Admin Login</h3>
+        <p>Oversee the LMS platform, users, and settings.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 LMS Portal. All rights reserved.</p>
+  </footer>
 </body>
 </html>
