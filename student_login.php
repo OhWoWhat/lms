@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $mysqli = new mysqli("localhost", "root", "", "lms_db");
 
 if ($mysqli->connect_error) {
@@ -15,12 +17,14 @@ $result = $stmt->get_result();
 
 if ($row = $result->fetch_assoc()) {
     if (password_verify($password, $row['password'])) {
-        echo "Login successful!";
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['role'] = $row['role'];
+        header("Location: dashboard.php");
+        exit();
     } else {
         echo "Invalid password.";
     }
 } else {
     echo "User not found.";
 }
-
 ?>
