@@ -28,16 +28,16 @@ $role = $_SESSION['role'];
     <h2>Dashboard</h2>
 
     <?php if ($role === 'student'): ?>
-      <div class="card-grid">
-        <div class="card">
-          <h3>My Courses</h3>
-          <p>View and manage your enrolled courses.</p>
-        </div>
-        <div class="card">
-          <h3>Assignments</h3>
-          <p>Check upcoming and submitted assignments.</p>
-        </div>
-      </div>
+    <div class="card-grid">
+      <a href="student/student_courses.php" class="card">
+        <h3>My Courses</h3>
+        <p>View and manage your enrolled courses.</p>
+      </a>
+      <a href="student/assignments.php" class="card">
+        <h3>Assignments</h3>
+        <p>Check upcoming and submitted assignments.</p>
+      </a>
+    </div>
     <?php elseif ($role === 'professor'): ?>
       <div class="card-grid">
         <div class="card">
@@ -51,14 +51,18 @@ $role = $_SESSION['role'];
       </div>
     <?php elseif ($role === 'admin'): ?>
       <div class="card-grid">
-        <div class="card">
+        <a href="admin/user_management.php" class="card">
           <h3>User Management</h3>
           <p>Add, remove, or update users in the system.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="admin/system_logs.php" class="card">
           <h3>System Logs</h3>
           <p>Monitor activity and usage statistics.</p>
-        </div>
+        </a>
+        <a href="admin/add_course.php" class="card">
+          <h3>Add Course</h3>
+          <p>Add a new course to the system.</p>
+        </a>
       </div>
     <?php endif; ?>
   </main>
